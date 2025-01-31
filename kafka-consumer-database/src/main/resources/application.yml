@@ -1,0 +1,23 @@
+server:
+  port: 8083
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: mygroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.StringDeserializer
+    datasource:
+      url: jdbc:mysql://localhost:3306/wikimedia
+      username: root
+      password: root
+    jpa:
+      hibernate:
+        ddl-auto: update
+    properties:
+      hibernate:
+        show-sql: true
+
+
+
