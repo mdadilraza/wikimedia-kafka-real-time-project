@@ -21,6 +21,6 @@ public class KafkaDatabaseConsumer {
         log.info("Event message received {}" ,eventMessage);
         WikimediaData wikimediaData = new WikimediaData();
         wikimediaData.setWikiEventData(eventMessage);
-       wikimediaDataRepository.saveAndFlush(wikimediaData);
+       wikimediaDataRepository.save(wikimediaData);
     }
 }
